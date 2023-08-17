@@ -1,0 +1,53 @@
+.container{
+    text-align: center;
+    background-color:greenyellow;
+    margin-top:10px;
+    padding-bottom:20px;
+    border-radius:30px;
+}
+#data{
+    margin-left:10px;
+    margin-bottom:10px;
+    padding-left:20px;
+    border-radius:50px;
+}
+#submit{
+    margin-left:10px;
+    padding-left:50px;
+    padding-right:95px;
+    border-radius:50px;
+    color:black;
+
+}
+#button{
+    margin-left:10px;
+    padding-left:50px;
+    padding-right:95px;
+    border-radius:50px;
+    color:black;
+}
+.values{
+    background-color:gold;
+    text-align: center;
+    margin-left:300px;
+    margin-right:300px;
+    margin-top:20px;
+    height:auto;
+    border-radius:20px;
+}
+#delete{
+    margin-left:10px;
+    margin-bottom:10px;
+    padding-left:20px;
+    border-radius:50px;
+}
+
+.col{
+    text-decoration: line-through;
+}
+#heads{
+    background-color:rgb(155, 232, 216);
+}
+#active{
+    background-color:green;
+}
