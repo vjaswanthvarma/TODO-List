@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<body>
+    <%- include("partials/header.ejs")%>
+    <div class="container">
+        <div class="heads">
+        <form action="/" method="POST">
+            <h3>Enter the our Today list</h3>
+            <input type="text" name="List" id="data"  placeholder="Enter new Item"><br>
+            <input type="submit" value="submit" id="submit">
+        </form>
+        </div>
+        <div class="Delete">
+        <form action="/delete" method="POST">
+            <h3>Enter the name of delete Item!</h3>
+            <input type="text" name="key" id="delete" placeholder="Enter delete item name"><br>
+            <input type="submit" value="click Here" id="button">
+        </form>
+        </div>
+        <div class="values">
+        <% if(locals.name){%>
+        <% for(var i=0;i<name.length;i++) {%>
+                <h4><%=name[i]%></h4>
+        <%}%>
+        <%}%>
+        </div>
+        </div>
+        <script>
+            for(var i=0;i<document.querySelectorAll("h4").length;i++){
+                document.querySelectorAll("h4")[i].addEventListener("click",function(){ 
+                    this.classList.toggle("col")
+                })
+            }
+        </script>
+        <%- include("partials/footer.ejs")%>
+</body>
+</html>

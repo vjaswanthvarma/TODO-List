@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            text-align: center;
+            background-color:greenyellow;
+            margin-top:10px;
+            padding-bottom:20px;
+            border-radius:30px;
+        }
+        #data{
+            margin-left:10px;
+            margin-bottom:10px;
+            padding-left:20px;
+            border-radius:50px;
+        }
+        #submit{
+            margin-left:10px;
+            padding-left:50px;
+            padding-right:95px;
+            border-radius:50px;
+            color:black;
+
+        }
+        .values{
+            background-color:gold;
+            text-align: center;
+            margin-left:300px;
+            margin-right:300px;
+            margin-top:20px;
+            height:auto;
+            border-radius:20px;
+        }
+        .col{
+            text-decoration: line-through;
+        }
+        #heads{
+            background-color:rgb(155, 232, 216);
+        }
+    </style>
+</head>
+<body>
+    <%- include("partials/header.ejs")%>
+    <div class="container">
+        <div class="heads">
+        <form action="/about" method="POST">
+            <h3>Enter the our Work list</h3>
+            <input type="text" name="List" id="data"><br>
+            <input type="submit" value="submit" id="submit">
+        </form>
+        </div>
+        <div class="values">
+        <% if(locals.name){%>
+        <% for(var i=0;i<name.length;i++) {%>
+
+                <h4>-<%=name[i]%></h4>
+        <%}%>
+        <%}%>
+        </div>
+        </div>
+        <script>
+            for(var i=0;i<document.querySelectorAll("h4").length;i++){
+                document.querySelectorAll("h4")[i].addEventListener("click",function(){
+                    this.classList.toggle("col")
+                })
+            }
+        </script>
+</body>
+</html>
